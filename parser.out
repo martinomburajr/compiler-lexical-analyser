@@ -1,0 +1,51 @@
+Created by PLY version 3.7 (http://www.dabeaz.com/ply)
+
+Unused terminals:
+
+    COMMENT
+    WHITESPACE
+
+Grammar
+
+Rule 0     S' -> start
+Rule 1     start -> program
+Rule 2     program -> multStatements
+Rule 3     multStatements -> statement multStatements
+Rule 4     multStatements -> Empty
+Rule 5     statement -> ID EQUALS expression
+Rule 6     expression -> expression ADDITION term
+Rule 7     expression -> expression SUBTRACTION term
+Rule 8     expression -> term
+Rule 9     term -> term DIVISION factor
+Rule 10    term -> term MULTIPLICATION factor
+Rule 11    term -> factor
+Rule 12    factor -> LPAREN expression RPAREN
+Rule 13    factor -> FLOAT_LITERAL
+Rule 14    factor -> ID
+
+Terminals, with rules where they appear
+
+ADDITION             : 6
+COMMENT              : 
+DIVISION             : 9
+EQUALS               : 5
+FLOAT_LITERAL        : 13
+ID                   : 5 14
+LPAREN               : 12
+MULTIPLICATION       : 10
+RPAREN               : 12
+SUBTRACTION          : 7
+WHITESPACE           : 
+error                : 
+
+Nonterminals, with rules where they appear
+
+Empty                : 4
+expression           : 5 6 7 12
+factor               : 9 10 11
+multStatements       : 2 3
+program              : 1
+start                : 0
+statement            : 3
+term                 : 6 7 8 9 10
+

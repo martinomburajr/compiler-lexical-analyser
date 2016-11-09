@@ -1,0 +1,16 @@
+Start
+	Program
+		AssignStatement
+			ID,val
+			FloatExpression
+				FlOAT_LITERAL,12
+		AssignStatement
+			ID,result
+			MulExpression
+				IdentifierExpression
+					ID,val
+				SubExpression
+					FloatExpression
+						FlOAT_LITERAL,60
+					FloatExpression
+						FlOAT_LITERAL,2e4
